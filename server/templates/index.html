@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head><title>RPi Smart Uplift</title>
+        <script
+			  src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			  crossorigin="anonymous"></script>
+    <script type="text/javascript">
+    $(function(){
+
+      var data = {
+         type:"POST",
+         data:{'SECRET': $('#secret').val()}
+      }
+      $('#tv_on_off').click(function(){
+          $.ajax('/tvon',data);
+      });
+      $('#tv_input').click(function(){
+          $.ajax('/tvinput',data);
+      });
+      $('#soundbar_on_off').click(function(){
+          $.ajax('/soundbaron',data);
+      });
+
+      $('#soundbar_input').click(function(){
+          $.ajax('/soundbarinput',data);
+      });
+
+
+    });
+
+
+        </script>
+    
+    </head>
+    <body>
+        <input type="text" name="secret" id="secret">
+        <h1>TV</h1>
+        <button id="tv_on_off">Turn on/off</button>
+        <button id="tv_input">Toggle Inputs</button>
+        <h1>Soundbar</h1>
+        <button id="soundbar_on_off">Turn on/off</button>
+        <button id="soundbar_input">Toggle Inputs</button>
+    </body>
+</html>

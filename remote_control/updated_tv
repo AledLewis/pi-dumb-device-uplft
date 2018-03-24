@@ -1,0 +1,37 @@
+
+# Please make this file available to others
+# by sending it to <lirc@bartelmus.de>
+#
+# this config file was automatically generated
+# using lirc-0.9.0-pre1(default) on Sat Mar 17 19:24:19 2018
+#
+# contributed by 
+#
+# brand:                       updated_tv
+# model no. of remote control: 
+# devices being controlled by this remote:
+#
+
+begin remote
+
+  name  updated_tv
+  bits           13
+  flags RC5|CONST_LENGTH
+  eps            30
+  aeps          100
+
+  one           906   872
+  zero          906   872
+  plead         900
+  gap          114506
+  toggle_bit_mask 0x800
+
+      begin codes
+          KEY_1                    0x1041
+          KEY_4                    0x1044
+          KEY_OK                   0x1075
+      end codes
+
+end remote
+
+

@@ -1,0 +1,3 @@
+irsend SEND_ONCE /home/pi/tv.conf KEY_SWITCHVIDEOMODE
+sleep 0.5
+irsend SEND_ONCE /home/pi/tv.conf KEY_1

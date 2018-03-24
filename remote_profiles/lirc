@@ -1,0 +1,78 @@
+
+# Please make this file available to others
+# by sending it to <lirc@bartelmus.de>
+#
+# this config file was automatically generated
+# using lirc-0.9.0-pre1(default) on Wed Mar 14 20:46:11 2018
+#
+# contributed by 
+#
+# brand:                       /home/pi/soundbar.conf
+# model no. of remote control: 
+# devices being controlled by this remote:
+#
+
+begin remote
+
+  name  /home/pi/soundbar.conf
+  bits           15
+  flags SPACE_ENC|CONST_LENGTH
+  eps            30
+  aeps          100
+
+  header       2420   588
+  one          1210   575
+  zero          618   575
+  gap          45072
+  min_repeat      2
+#  suppress_repeat 2
+#  uncomment to suppress unwanted repeats
+  toggle_bit_mask 0x0
+
+      begin codes
+          KEY_POWER                0x540C
+          KEY_AUDIO                0x4B0D
+      end codes
+
+end remote
+
+
+
+# Please make this file available to others
+# by sending it to <lirc@bartelmus.de>
+#
+# this config file was automatically generated
+# using lirc-0.9.0-pre1(default) on Wed Mar 14 20:40:37 2018
+#
+# contributed by 
+#
+# brand:                       /home/pi/lircd.conf
+# model no. of remote control: 
+# devices being controlled by this remote:
+#
+
+begin remote
+
+  name  /home/pi/tv.conf
+  bits           13
+  flags RC5|CONST_LENGTH
+  eps            30
+  aeps          100
+
+  one           904   873
+  zero          904   873
+  plead         897
+  gap          114517
+  toggle_bit_mask 0x800
+
+      begin codes
+          KEY_POWER                0x104C
+          KEY_SWITCHVIDEOMODE      0x1078
+          KEY_1                    0x1041
+          KEY_4                    0x1044
+          KEY_OK                   0x1075
+      end codes
+
+end remote
+
+
